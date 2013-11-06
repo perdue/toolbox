@@ -1,0 +1,17 @@
+ libRkin.so: An object-oriented interface library to the rkin Fortran 
+             library. This C++ code is a wrapper for the Fortran code.
+             This shared object library allows the use of rkin inside
+             a C++ program.  This library was based on the rkin.for
+             code modified by Sean Stave.  I have added the class 
+             interface and a Makefile to compile the code.
+
+             -- August 2009, Brent Perdue
+             -- Updated Makefile: 05/10/2011, Brent Perdue
+             
+
+ - Rkin looks for a copy of ASS83A.DAT in the current directory.  So copy it 
+   to your working directory or symlink to it from your working directory.
+
+
+ - Look at howto_Rkin.cxx for how to use the Rkin class.
+   Look at Rkin.h to see the public methods available.

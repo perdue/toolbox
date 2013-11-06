@@ -1,0 +1,33 @@
+	Program RKIN performs relativistic kinematic calculations for two-body
+nuclear reactions.  The program is designed for simple interactive use.  The
+user is prompted for input such as incident lab energies, angles, excitation
+energies, etc.
+ 
+	The reaction should be entered in the usual form A(a,b)B.  Nuclei are
+specified by their atomic number and symbol, e.g. 27Al.  Proton, neutron, 
+deuteron, triton, alpha particle, gamma ray, and electron may be abbreviated
+by p, n, d, t, a, g, and e respectively.  The residual nucleus need not be 
+specified.  Letters may be entered in either upper or lower case.  If an error
+or inconsistency is detected, the program will request that the code be retyped.
+ 
+	The output appears in a file RKIN.OUT.  Two formats are available.  The
+standard output format has been maintained for compatibility with earlier
+versions of the program.  Also, this format must be used if the results are to
+be plotted by program PLOTKIN.
+ 
+	An alternative output is also available.  It suppresses printing of the
+second kinematic solution except when this solution is non-zero.  Also, when the
+ejectile is charged, the range of the particle in silicon is calculated.  The
+user also may specify the thicknesses of up to two silicon surface-barrier
+detectors and the energy deposition for these detectors is calculated.
+Additionally, this format differs from the standard in that the momentum
+transfer and the kinematic shift are calculated and that the output
+is oragnized by angle rather than by the final state of the residual nucleus.
+
+	Currently (8/82), the program is believed to be bug-free.  Comments and
+reports of any errors should be directed to Bennett Karp.
+
+2/20/84
+	A modification has been added to RKIN that will prevent it
+from crashing when the scattering angle is 180 degrees.  In some cases,
+it had been failing. - BCK
