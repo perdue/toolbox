@@ -1,0 +1,15 @@
+void browser(void)
+{
+  TString name = "Browser";
+  TString title = "ROOT Object Browser";
+  Int_t x  = 1100;
+  Int_t y  = 0;
+  UInt_t w = 525;
+  UInt_t h = 600;
+
+  new TBrowser(name,title,x,y,w,h);
+  // This call to TBrowser generates the following:
+  // "Error in <TPluginHandler::ExecPlugin>: nargs (7) not consistent with expected number of arguments ([0-5])"
+  // I'm not sure why.  It is the correct format for the constructor.  I guess I'll live with it.
+
+}//END of browser()

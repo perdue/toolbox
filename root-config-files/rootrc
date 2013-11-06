@@ -1,0 +1,14 @@
+Rint.Load:			$(MYROOTTOOLBOX)/root-config-files/rootalias
+Rint.Logon:			$(MYROOTTOOLBOX)/root-config-files/rootlogon
+Rint.Logoff:			$(MYROOTTOOLBOX)/root-config-files/rootlogoff
+
+Browser.IconStyle:		details
+Browser.Name:			TRootBrowserLite
+
+Canvas.ShowEventStatus:		true
+
+Gui.StatusFont:                 -*-helvetica-bold-r-*-*-15-*-*-*-*-*-iso8859-1
+
+Hist.Binning.1D.x:		1024
+Hist.Binning.2D.x:		256
+Hist.Binning.2D.y:		256

@@ -8,7 +8,7 @@ Analyzer::Analyzer()
   fClassName("Analyzer")
 {
   TExec e;
-  e.Exec(".x /home/perdue/.rootlogon");
+  e.Exec(".x $MYROOTTOOLBOX/root-config-files/rootlogon");
 
   SetPathToRunData("./");
   SetPathToSimData("./");

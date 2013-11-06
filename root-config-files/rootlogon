@@ -1,0 +1,33 @@
+{
+  gROOT->SetStyle("Plain");
+  gStyle->SetOptStat("nei");
+  gStyle->SetPalette(1);
+
+  gStyle->SetPadBottomMargin(0.15);
+  gStyle->SetPadTopMargin(0.15);
+//  gStyle->SetPadTopMargin(0.05);
+  gStyle->SetPadLeftMargin(0.15);
+  gStyle->SetPadRightMargin(0.15);
+//  gStyle->SetPadRightMargin(0.05);
+
+  gStyle->SetTitleAlign(13);
+  gStyle->SetTitleFontSize(0.07);
+
+  gStyle->SetTitleSize(0.062,"x");
+  gStyle->SetTitleSize(0.062,"y");
+  gStyle->SetLabelSize(0.060,"x");
+  gStyle->SetLabelSize(0.060,"y");
+
+//  gStyle->SetCanvasDefX(1030);
+  gStyle->SetCanvasDefX(0);
+  gStyle->SetCanvasDefY(0);
+  gStyle->SetCanvasDefW(650);
+  gStyle->SetCanvasDefH(500);
+//  gStyle->SetCanvasDefW(825);
+//  gStyle->SetCanvasDefH(500);
+
+  gSystem->Load("libRIO");
+  gSystem->Load("libHist");
+  gSystem->Load("libGraf");
+  gSystem->Load("libGpad");
+}
