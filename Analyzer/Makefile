@@ -25,7 +25,8 @@ OBJS = $(TMPDIR)/$(LIBNAME).o $(TMPDIR)/$(LIBNAME)Dictionary.o $(TMPDIR)/ReplayT
 # Creating shared object library.
 $(LIBDIR)/lib$(LIBNAME).so: $(OBJS)
 	@echo "   Creating Shared Lib: $^ ---> $@"
-	@$(CXX) $(LDFLAGS) -shared -o $@ $^
+#	@$(CXX) $(LDFLAGS) -shared -o $@ $^
+	@$(CXX) -shared -o $@ $^ $(LDFLAGS)
 
 # Compiling all source files, including dictionary source file, using a pattern rule.
 $(TMPDIR)/%.o : %.cxx
