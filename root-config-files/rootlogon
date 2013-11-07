@@ -21,10 +21,10 @@
 //  gStyle->SetCanvasDefX(1030);
   gStyle->SetCanvasDefX(0);
   gStyle->SetCanvasDefY(0);
-  gStyle->SetCanvasDefW(650);
-  gStyle->SetCanvasDefH(500);
-//  gStyle->SetCanvasDefW(825);
+//  gStyle->SetCanvasDefW(650);
 //  gStyle->SetCanvasDefH(500);
+  gStyle->SetCanvasDefW(825);
+  gStyle->SetCanvasDefH(500);
 
   gSystem->Load("libRIO");
   gSystem->Load("libHist");

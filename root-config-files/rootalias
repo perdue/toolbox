@@ -2,10 +2,10 @@ void browser(void)
 {
   TString name = "Browser";
   TString title = "ROOT Object Browser";
-  Int_t x  = 1100;
+  Int_t x  = 1390;
   Int_t y  = 0;
   UInt_t w = 525;
-  UInt_t h = 600;
+  UInt_t h = 900;
 
   new TBrowser(name,title,x,y,w,h);
   // This call to TBrowser generates the following:
