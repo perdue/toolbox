@@ -8,6 +8,9 @@ TMPDIR = ../tmp
 # All libraries are placed here.
 LIBDIR = ../lib
 
+# All header files are linked here.
+HDRDIR = ../include
+
 # If a file that is listed as a prerequisite does not exist in the current directory,
 # 'make' searches the directories listed in VPATH for a file with that name.
 VPATH = $(TMPDIR)
@@ -25,8 +28,8 @@ OBJS = $(TMPDIR)/$(LIBNAME).o $(TMPDIR)/$(LIBNAME)Dictionary.o $(TMPDIR)/ReplayT
 # Creating shared object library.
 $(LIBDIR)/lib$(LIBNAME).so: $(OBJS)
 	@echo "   Creating Shared Lib: $^ ---> $@"
-#	@$(CXX) $(LDFLAGS) -shared -o $@ $^
 	@$(CXX) -shared -o $@ $^ $(LDFLAGS)
+	@for hdr in $(HDRS); do (cd $(HDRDIR); ln -s ../$(LIBNAME)/$$hdr); done
 
 # Compiling all source files, including dictionary source file, using a pattern rule.
 $(TMPDIR)/%.o : %.cxx

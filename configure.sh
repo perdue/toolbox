@@ -1,6 +1,8 @@
 #!/bin/bash
 
-rm -rf tmp
-rm -rf lib
-mkdir tmp
-mkdir lib
+rm -vrf tmp
+rm -vrf include
+rm -vrf lib
+mkdir -v tmp
+mkdir -v include
+mkdir -v lib

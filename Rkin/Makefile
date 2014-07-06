@@ -12,6 +12,9 @@ TMPDIR = ../tmp
 # All libraries are placed here.
 LIBDIR = ../lib
 
+# All header files are linked here.
+HDRDIR = ../include
+
 # If a file that is listed as a prerequisite does not exist in the current directory,
 # 'make' searches the directories listed in VPATH for a file with that name.
 VPATH = $(TMPDIR)
@@ -37,6 +40,7 @@ howto_Rkin: $(TMPDIR)/howto_Rkin.o $(LIBDIR)/lib$(LIBNAME).so
 $(LIBDIR)/lib$(LIBNAME).so: $(OBJS)
 	@echo "   Creating Shared Lib: $^ ---> $@"
 	@$(CXX) $(LDFLAGS) -shared $^ $(G2CPATH)/libg2c.so.0 -o $@
+	@for hdr in $(HDRS); do (cd $(HDRDIR); ln -s ../$(LIBNAME)/$$hdr); done
 
 # Compiling all C++ source files, including dictionary source file, using a pattern rule.
 $(TMPDIR)/%.o : %.cxx
