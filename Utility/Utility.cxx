@@ -63,3 +63,13 @@ Double_t Utility::CalcDiviError(Double_t A, Double_t B, Double_t eA, Double_t eB
 
 }//END of CalcDiviError()
 
+///////////////////////////////////////////////////////////
+Double_t Utility::TimeOfFlight(Double_t chan, Double_t nsPerChan, Double_t gammaChan, Double_t d)
+{
+  Double_t c = SpeedOfLight(); // cm/ns
+
+  Double_t tof = nsPerChan * (chan - gammaChan) + d/c;
+
+  return tof;
+
+}//END of TimeOfFlight()

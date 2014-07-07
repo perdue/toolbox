@@ -23,6 +23,8 @@ class Utility
 
     static Double_t CalcDiviError(Double_t A, Double_t B, Double_t eA, Double_t eB);
 
+    static Double_t TimeOfFlight(Double_t chan, Double_t nsPerChan, Double_t gammaChan, Double_t d); // Converts from time difference in channels to TOF in ns.
+
 };//END of class Utility
 
 #endif

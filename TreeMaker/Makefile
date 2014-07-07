@@ -29,7 +29,7 @@ OBJS = $(TMPDIR)/$(LIBNAME).o $(TMPDIR)/$(LIBNAME)Dictionary.o
 $(LIBDIR)/lib$(LIBNAME).so: $(OBJS)
 	@echo "   Creating Shared Lib: $^ ---> $@"
 	@$(CXX) -shared -o $@ $^ $(LDFLAGS)
-	@for hdr in $(HDRS); do (cd $(HDRDIR); ln -s ../$(LIBNAME)/$$hdr); done
+	@for hdr in $(HDRS); do (cd $(HDRDIR); ln -sf ../$(LIBNAME)/$$hdr); done
 
 # Compiling all source files, including dictionary source file, using a pattern rule.
 $(TMPDIR)/%.o : %.cxx

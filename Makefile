@@ -1,4 +1,4 @@
-SUBDIRS = Analyzer IsfConverter LightOutput Utility Rkin IsfConverter
+SUBDIRS = Analyzer IsfConverter LightOutput Rkin TreeMaker Utility 
 
 .PHONY : all clean
 

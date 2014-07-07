@@ -40,7 +40,7 @@ howto_Rkin: $(TMPDIR)/howto_Rkin.o $(LIBDIR)/lib$(LIBNAME).so
 $(LIBDIR)/lib$(LIBNAME).so: $(OBJS)
 	@echo "   Creating Shared Lib: $^ ---> $@"
 	@$(CXX) $(LDFLAGS) -shared $^ $(G2CPATH)/libg2c.so.0 -o $@
-	@for hdr in $(HDRS); do (cd $(HDRDIR); ln -s ../$(LIBNAME)/$$hdr); done
+	@for hdr in $(HDRS); do (cd $(HDRDIR); ln -sf ../$(LIBNAME)/$$hdr); done
 
 # Compiling all C++ source files, including dictionary source file, using a pattern rule.
 $(TMPDIR)/%.o : %.cxx
